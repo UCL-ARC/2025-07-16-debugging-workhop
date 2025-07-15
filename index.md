@@ -298,12 +298,12 @@ of code below the Schedule `<h2>` header below with
     <tr>
       <td>16:00 – 16:55</td>
       <td>55 min</td>
-      <td>Reverse debugging exercises with the TotalView Debugger (Instructors: Dean Stewart and Will De Figueira)</td>
+      <td>Reverse debugging exercises with the TotalView Debugger (Instructors: Dean Stewart and Will De Figueira, Perforce)</td>
     </tr>
     <tr>
       <td>16:55 – 17:00</td>
       <td>5 min</td>
-      <td>Concluding remarks</td>
+      <td>Concluding remarks, advanced exercises, further learning resources, next steps</td>
     </tr>
   </tbody>
     </table>
