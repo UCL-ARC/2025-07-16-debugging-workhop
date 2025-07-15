@@ -299,20 +299,14 @@ Windows users should install [WSL2 and any Linux distro](https://learn.microsoft
 <h3 id="nixdarwinsetup">Linux and macOS Users</h3>
 <p>Follow these steps to install all required tools for the workshop using <strong>Pixi</strong> on Linux and macOS (Apple Silicon &amp; Intel):</p>
 <ol>
-  <li><strong>Install Pixi</strong> by running this command in your terminal:<br>
+  <li>Install <code>pixi</code>:
     <pre><code class="language-bash">curl -fsSL https://pixi.sh/install.sh | sh</code></pre>
   </li>
-  <li><strong>Restart your terminal or shell</strong> to apply the changes.</li>
-  <li><strong>Get the workshop files</strong> by cloning or downloading the exercise repository:<br>
-    <pre><code class="language-bash">git clone https://github.com/Cambridge-ICCS/summer-school-debugging.git
-cd summer-school-debugging</code></pre>
-  </li>
-  <li><strong>Download the <a href="./pyproject.toml" download><code>pyproject.toml</code></strong> file into your working directory (where you run Pixi):<br>
-    You can download it from the repository or place it manually in the folder.
-  </li>
-  <li><strong>Launch the Pixi shell</strong> to enter an environment with all tools installed:<br>
+  <li>Restart your terminal or shell to make the installation effective.</li>
+  <li>Clone or download the exercise files from this <a href="https://github.com/Cambridge-ICCS/summer-school-debugging">GitHub repository</a> and navigate to this directory on your local filesystem.</li>
+  <li>Download the <a href="./pyproject.toml" download><code>pyproject.toml</code></a> file into your working directory (where you run Pixi).</li>
+  <li>Run the following command to enter the prepared environment:
     <pre><code class="language-bash">pixi shell</code></pre>
   </li>
 </ol>
-<p>All the necessary tools and packages will now be available inside this shell session.</p>
 
