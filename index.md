@@ -425,6 +425,10 @@ The room has been reserved until 6 PM for those interested to stay back, ask que
 
 <h4>TotalView and training exercises</h4>
 
+<p>The installation guide for TotalView is available <a href="https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fhelp.totalview.io%2Fcurrent%2FHTML%2Finstallguide%2Finstall_totalview.htm&data=05%7C02%7Ckrishna.kumar%40ucl.ac.uk%7C14f0f55309484f32398908ddc2b52e4b%7C1faf88fea9984c5b93c9210a11d9a5c2%7C0%7C0%7C638880805616705153%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=bBJYNJKtDOlMRIs4KM%2BtJM3ghq5vT0EXTiNSgAoIaL0%3D&reserved=0" target="_blank">here</a>.</p>
+
+<p>Please download the license key from <a href="https://liveuclac-my.sharepoint.com/:u:/g/personal/uccagop_ucl_ac_uk/EROWSo3wHCVEsxNlnh9WjIcBIqaxGsxnuZwKWmAkCJlH2w?e=lCKvL8">here</a>. After you have installed TotalView, copy the license key to the <code>&lt;install_dir&gt;/toolworks/tv_license</code> directory.</p>
+
 <p>
   The training exercises for use with the TotalView debugger can be downloaded from 
   <a href="https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fperforce1.my.salesforce.com%2Fsfc%2Fp%2F5Y000002UtaV%2Fa%2FPA000000XQOj%2FJUEwIrm1wbdPvO.vLnEbWPoIzm.YhGinfZj.1.h0v9A&data=05%7C02%7Ckrishna.kumar%40ucl.ac.uk%7C0e9530ee151a4b92e6c108ddc3e06fac%7C1faf88fea9984c5b93c9210a11d9a5c2%7C0%7C0%7C638882090914097751%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=hZMXz2v1auh%2BvlfJSeP8KvlXc5%2Fkw2NRtvL1gBN42hU%3D&reserved=0" 
