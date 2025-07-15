@@ -114,7 +114,7 @@ incubator: https://carpentries-incubator.org/
 lc_site: https://librarycarpentry.org/
 swc_github: https://github.com/swcarpentry
 swc_pages: https://swcarpentry.github.io
-swc_site: https://software-carpentry.org
+swc_site: https://www.ucl.ac.uk/advanced-research-computing/
 template_repo: https://github.com/carpentries/styles
 training_site: https://carpentries.github.io/instructor-training
 workshop_repo: https://github.com/carpentries/workshop-template
