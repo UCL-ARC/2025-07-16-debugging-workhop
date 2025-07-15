@@ -314,6 +314,11 @@ The room has been reserved until 6 PM for those interested to stay back, ask que
   </li>
 </ol>
 
+<h5>For the CUDA/MPI example</h5>
+  <li>Clone or download the exercise files from this <a href="https://github.com/TomMelt/nvidia-mpi-cuda-example">GitHub repository</a>. We will provide instructions on how to run this example on a HPC system</li>
+
+
+
 <h4>Mozilla rr</h4>
 
 <p>
@@ -417,3 +422,13 @@ The room has been reserved until 6 PM for those interested to stay back, ask que
     });
   });
 </script>
+
+<h4>TotalView and training exercises</h4>
+
+<p>
+  The training exercises for use with the TotalView debugger can be downloaded from 
+  <a href="https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fperforce1.my.salesforce.com%2Fsfc%2Fp%2F5Y000002UtaV%2Fa%2FPA000000XQOj%2FJUEwIrm1wbdPvO.vLnEbWPoIzm.YhGinfZj.1.h0v9A&data=05%7C02%7Ckrishna.kumar%40ucl.ac.uk%7C0e9530ee151a4b92e6c108ddc3e06fac%7C1faf88fea9984c5b93c9210a11d9a5c2%7C0%7C0%7C638882090914097751%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=hZMXz2v1auh%2BvlfJSeP8KvlXc5%2Fkw2NRtvL1gBN42hU%3D&reserved=0" 
+     target="_blank" rel="noopener noreferrer">
+    here
+  </a>.
+</p>
