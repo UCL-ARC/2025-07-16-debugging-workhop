@@ -61,9 +61,6 @@ the pitch.
     Education team offers</a>.
 </p>
 
-{% comment %}
-AUDIENCE
-
 <p id="who">
   <strong>Who:</strong>
   The course is aimed at anyone with an interest and experience in source-level debugging of compiled software code. It is particularly of interest to researchers and developers who are interested in High Performance Computing.
