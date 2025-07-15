@@ -314,3 +314,148 @@ The room has been reserved until 6 PM for those interested to stay back, ask que
   </li>
 </ol>
 
+<style>
+  button.accordion {
+    background-color: #eee;
+    cursor: pointer;
+    padding: 10px 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    border-left: 4px solid #333366;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+  }
+  button.accordion:hover, button.accordion.active {
+    background-color: #ccc;
+  }
+  div.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #f9f9f9;
+    padding: 0 15px;
+    border-left: 4px solid #333366;
+    margin-bottom: 15px;
+  }
+  div.panel pre {
+    margin: 10px 0;
+    background: #f4f4f4;
+    padding: 10px;
+    overflow-x: auto;
+  }
+</style>
+
+<button class="accordion">Debian / Ubuntu</button>
+<div class="panel">
+  <pre><code>sudo apt update
+sudo apt install rr</code></pre>
+</div>
+
+<button class="accordion">Fedora</button>
+<div class="panel">
+  <pre><code>sudo dnf install rr</code></pre>
+</div>
+
+<button class="accordion">Arch Linux / Manjaro</button>
+<div class="panel">
+  <p>Install from AUR:</p>
+  <pre><code>yay -S rr</code></pre>
+</div>
+
+<button class="accordion">openSUSE (Leap / Tumbleweed)</button>
+<div class="panel">
+  <pre><code>sudo zypper refresh
+sudo zypper install rr</code></pre>
+</div>
+
+<button class="accordion">Gentoo</button>
+<div class="panel">
+  <p>Install via overlay or manual build:</p>
+  <pre><code>git clone https://github.com/rr-debugger/rr.git /usr/local/portage/sys-devel/rr
+emerge --sync
+emerge -av sys-devel/rr</code></pre>
+</div>
+
+<button class="accordion">Alpine Linux</button>
+<div class="panel">
+  <p>No native <code>rr</code> package. Build from source:</p>
+  <pre><code>sudo apk add build-base cmake python3 zlib-dev capnproto-dev
+git clone https://github.com/rr-debugger/rr.git
+cd rr
+mkdir build &amp;&amp; cd build
+cmake ..
+make -j$(nproc)
+sudo make install</code></pre>
+</div>
+
+<button class="accordion">NixOS</button>
+<div class="panel">
+  <p>Available in nixpkgs. Add to <code>environment.systemPackages</code>:</p>
+  <pre><code>environment.systemPackages = with pkgs; [ rr ];</code></pre>
+  <p>Configure <code>configuration.nix</code> accordingly.</p>
+</div>
+
+<button class="accordion">RHEL / CentOS / EPEL</button>
+<div class="panel">
+  <p>EPEL repo does not currently package <code>rr</code>. Try enabling EPEL:</p>
+  <pre><code>sudo dnf install epel-release
+sudo dnf install rr</code></pre>
+  <p>If not found, build from source as below.</p>
+</div>
+
+<button class="accordion">Slackware</button>
+<div class="panel">
+  <p>No official package. Build from source:</p>
+  <pre><code>sudo slackpkg install cmake gcc g++ python3 zlib-devel capnproto-devel
+git clone https://github.com/rr-debugger/rr.git
+cd rr
+mkdir build &amp;&amp; cd build
+cmake ..
+make -j$(nproc)
+sudo make install</code></pre>
+</div>
+
+<button class="accordion">Void Linux</button>
+<div class="panel">
+  <p>Package <code>rr</code> available in void repos:</p>
+  <pre><code>sudo xbps-install -Sy rr</code></pre>
+</div>
+
+<button class="accordion">Other distros / Build from source</button>
+<div class="panel">
+  <p>If <code>rr</code> is not available in your package manager, build it yourself:</p>
+  <pre><code>sudo [package-manager] install cmake gcc g++ python3 zlib-devel capnproto-devel
+git clone https://github.com/rr-debugger/rr.git
+cd rr
+mkdir build &amp;&amp; cd build
+cmake ..
+make -j$(nproc)
+sudo make install</code></pre>
+  <p>Replace <code>[package-manager]</code> with <code>apt</code>, <code>dnf</code>, <code>zypper</code>, <code>apk</code>, etc.</p>
+</div>
+
+<button class="accordion">macOS &amp; Windows</button>
+<div class="panel">
+  <p>Not natively supported. Use:</p>
+  <ul>
+    <li>A Linux virtual machine (VirtualBox, VMware, UTM)</li>
+    <li>Docker container running Linux</li>
+    <li>Windows: WSL2 with a Linux distro installed</li>
+  </ul>
+</div>
+
+<script>
+  document.querySelectorAll('button.accordion').forEach(button => {
+    button.addEventListener('click', () => {
+      button.classList.toggle('active');
+      const panel = button.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  });
+</script>
