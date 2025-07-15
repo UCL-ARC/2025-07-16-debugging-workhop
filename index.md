@@ -218,18 +218,25 @@ of code below the Schedule `<h2>` header below with
 
 <h2 id="schedule">Schedule</h2>
 
-{% if site.carpentry == "swc" %}
-{% include swc/schedule.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/schedule.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/schedule.html %}
-{% elsif site.carpentry == "ucl-arc-debugging" %}
-{% include ucl-arc-debugging/schedule.html %}
-{% elsif site.carpentry == "incubator" %}
-This workshop is teaching a lesson in 
-<a href="https://carpentries-incubator.org/">The Carpentries Incubator</a>. Please check <a href="{{site.incubator_lesson_site}}">the lesson homepage</a> for a list of lesson sections and estimated timings.
-{% endif %}
+| Time            | Duration     | Lesson / Activity                                      |
+|-----------------|--------------|---------------------------------------------------------|
+| 09:45 – 10:15   | 30 min       | Welcome, coffee/tea/pastries, intro to the workshop, logistics, schedule, software and environment setup help on user laptops |
+| 10:15 – 11:20   | 1 hr 5 min   | Exercises on command-line debugging of serial programs (Instructor: Krishna) |
+| 11:20 – 11:30   | 10 min       | Break                                                  |
+| 11:30 – 12:00   | 30 min       | Demonstration of reverse debugging capabilities of open source debuggers (Instructor: Krishna) |
+| 12:00 – 12:25   | 25 min       | Introduction to parallel (multi-core, multi-node) debugging principles and introduction to the `mdb` debugger (Instructor: Tom Meltzer) |
+| 12:25 – 12:55   | 30 min       | Exercise on multi-core debugging on laptops (Instructor: Tom Meltzer) |
+| 12:55 – 13:00   | 5 min        | Fold away the tables and vacate the room (another event is scheduled in the room) |
+| 14:00 – 14:05   | 5 min        | Return to room and setup the tables to continue the debugging workshop |
+| 14:05 – 14:15   | 10 min       | Sort out HPC access (James Legg) and pair up participants without HPC access |
+| 14:15 – 15:15   | 1 hr         | Intermediate `mdb` exercises: multi-node, GPU, BYOC (bring your own codes) debugging (Instructor: Tom Meltzer) |
+| 15:15 – 15:25   | 10 min       | Coffee break                                           |
+| 15:25 – 15:50   | 25 min       | Principles of time-travel (reverse) debugging (Instructor: Greg Law, undo.io) |
+| 15:50 – 16:00   | 10 min       | Setup Perforce TotalView demo license on users’ machines and help with installs |
+| 16:00 – 16:55   | 55 min       | Reverse debugging exercises with the TotalView Debugger (Instructors: Dean Stewart and Will De Figueira) |
+| 16:55 – 17:00   | 5 min        | Concluding remarks, next steps and further resources                                    |
+
+The room has been reserved until 6 PM for those interested to stay back and ask questions.
 
 {% comment %}
 Edit/replace the text above if you want to include a schedule table.
@@ -256,41 +263,3 @@ please preview your site before committing, and make sure to run
 'tools/check' as well.
 {% endcomment %}
 
-<h2 id="setup">Setup</h2>
-
-<p>
-  To participate in this
-  {% if site.carpentry == "swc" %}
-  Debugging
-  {% elsif site.carpentry == "dc" %}
-  Data Carpentry
-  {% elsif site.carpentry == "lc" %}
-  Library Carpentry
-  {% endif %}
-  workshop,
-  you will need access to software as described below.
-  In addition, you will need an up-to-date web browser.
-</p>
-
-{% if online != "false" %}
-{% include install_instructions/videoconferencing.html %}
-{% endif %}
-
-{% comment %}
-These are the installation instructions for the tools used
-during the workshop.
-{% endcomment %}
-
-{% if site.carpentry == "swc" %}
-{% include swc/setup.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/setup.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/setup.html %}
-{% elsif site.carpentry == "ucl-arc-debugging" %}
-{% include ucl-arc-debugging/setup.html %}
-{% elsif site.carpentry == "incubator" %}
-Please check the "Setup" page of
-<a href="{{site.incubator_lesson_site}}">the lesson homepage</a> for instructions to follow
-to obtain the software and data you will need to follow the lesson.
-{% endif %}
