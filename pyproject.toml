@@ -1,0 +1,62 @@
+[project]
+name = "arc_debugging_workshop_environment"
+version = "0.1.0"
+description = "Pixi debugging environment with MDB and common tools"
+authors = [{ name = "Krishnakumar", email = "krishna.kumar@ucl.ac.uk" }]
+
+[tool.pixi.project]
+name = "arc_debugging_workshop_environment"
+channels = ["conda-forge"]
+platforms = ["linux-64", "linux-aarch64", "osx-64", "osx-arm64"]
+
+[tool.pixi.pypi-dependencies]
+click = "==8.1.7" # CLI utility library, pinned for compatibility with mdb-debugger
+
+# From GitHub, editable for live dev
+mdb-debugger = { git = "https://github.com/TomMelt/mdb.git", editable = true }
+black = "==22.8.0"
+beautysh = "*"
+fortls = "*"
+ruff = "*"
+termgraph = "==0.5.3"
+
+[tool.pixi.dependencies]
+bat = "*"               # Syntax highlighting file viewer
+bzip2 = "*"             # Compression tools (bzip2)
+ccache = "*"            # Compiler cache to speed rebuilds
+clang-tools = "*"       # Clang language server tools (incl. clangd)
+clang = "*"             # clang
+clangxx = "*"           # clang++
+cmake = "*"             # Cross-platform build system
+cmakelang = "*"         # CMake language server
+cpplint = "*"           # C++ style checker
+cppcheck = "*"          # Static analyzer for C/C++
+curl = "*"              # URL data transfer tool
+gawk = "*"              # GNU awk text processor
+gdb = "*"               # GNU Debugger
+gfortran = "*"          # GNU Fortran compiler
+git = "*"               # Git version control
+gnu-coreutils = "*"     # GNU core utilities (ls, cp, mv, etc.)
+grep = "*"              # GNU grep pattern search
+lldb = "*"              # LLVM debugger alternative to gdb
+make = "*"              # GNU make build automation
+mold = "*"              # High-performance linker replacement
+neocmakelsp = "*"       # CMake language server protocol support
+openmpi = "*"           # MPI implementation for parallel computing
+pandoc = "*"            # Universal document converter
+python = ">=3.10,<3.12" # Python interpreter version constraint
+sed = "*"               # GNU sed stream editor
+shellcheck = "*"        # Shell script static analysis
+tree-sitter-cli = "*"   # Source code parsing CLI with tree-sitter
+
+# Linux-only packages (Linux x86_64 and aarch64)
+[tool.pixi.target.linux-64.dependencies]
+valgrind = "*" # Memory debugging/profiling tool for Linux
+elfutils = "*" # ELF utilities for Linux binaries
+
+[tool.pixi.target.linux-aarch64.dependencies]
+valgrind = "*" # Memory debugging/profiling tool for Linux
+elfutils = "*" # ELF utilities for Linux binaries
+
+[tool.pixi.tasks]
+debug = { cmd = "gdb", cwd = "." } # Helper task to start gdb in current dir

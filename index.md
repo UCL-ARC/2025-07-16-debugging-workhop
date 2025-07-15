@@ -194,28 +194,6 @@ Display the contact email address set in the configuration file.
 <hr/>
 
 
-{% comment %}
-SCHEDULE
-
-Show the workshop's schedule.
-
-Small changes to the schedule can be made by modifying the
-`schedule.html` found in the `_includes` folder for your
-workshop type (`swc`, `lc`, or `dc`). Edit the items and
-times in the table to match your plans. You may also want to
-change 'Day 1' and 'Day 2' to be actual dates or days of the
-week.
-
-For larger changes, a blank template for a 4-day workshop
-(useful for online teaching for instance) can be found in
-`_includes/custom-schedule.html`. Add the times, and what
-you will be teaching to this file. You may also want to add
-rows to the table if you wish to break down the schedule
-further. To use this custom schedule here, replace the block
-of code below the Schedule `<h2>` header below with
-`{% include custom-schedule.html %}`.
-{% endcomment %}
-
 <h2 id="schedule">Schedule</h2>
 
 <div class="row">       
@@ -311,30 +289,17 @@ of code below the Schedule `<h2>` header below with
   </div>
 </div>
 
-The room has been reserved until 6 PM for those interested to stay back and ask questions.
+The room has been reserved until 6 PM for those interested to stay back, ask questions, interact with speakers or other participants or continue to do exercises.
 
-{% comment %}
-Edit/replace the text above if you want to include a schedule table.
-See the contents of the _includes/custom-schedule.html file for an example of
-how one of these schedule tables is constructed.
-{% endcomment %}
+<h2 id="setup">Setup</h2>
 
-{% if site.pilot %}
-The lesson taught in this workshop is being piloted and a precise schedule is yet to be established. The workshop will include regular breaks. Please <a href="mailto:{{page.email}}">contact the workshop organisers</a> if you would like more information about the planned schedule.
-{% endif %}
+<h3 id="winsetup">Microsoft Windows</h3>
+Windows users should install [WSL2 and any Linux distro](https://learn.microsoft.com/en-us/windows/wsl/install) and follow the *nix instructions <a href="#linuxdarwinsetup">below</a> after launching a bash shell session within WSL2.
 
-<hr/>
-
-
-{% comment %}
-SETUP
-
-Delete irrelevant sections from the setup instructions.  Each
-section is inside a 'div' without any classes to make the beginning
-and end easier to find.
-
-This is the other place where people frequently make mistakes, so
-please preview your site before committing, and make sure to run
-'tools/check' as well.
-{% endcomment %}
-
+<h3 id="nixdarwinsetup">Linux and macOS Users</h3>
+Linux and macOS users (both Apple Silicon and intel x86_64 macs) can use `pixi` to install most of the packages/tools needed for this workshop by following the steps below:
+1. Install `pixi` `curl -fsSL https://pixi.sh/install.sh | sh`
+2. Now restart your terminal or shell to make the installation effective.
+3. Clone/download the exercise files from this [GitHub repository](https://github.com/Cambridge-ICCS/summer-school-debugging) and navigate to this directory on your local filesystem
+3. Download this [`pyproject.toml`](./pyproject.toml) file to the working directory 
+4. Run `pixi shell`, and all required tools shall be made available within the current shell session.
