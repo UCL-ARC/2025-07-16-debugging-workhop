@@ -367,8 +367,7 @@ The room has been reserved until 6 PM for those interested to stay back, ask que
 
 <button class="accordion">Debian / Ubuntu</button>
 <div class="panel">
-  <pre><code>sudo apt update
-sudo apt install rr</code></pre>
+  <pre><code>sudo apt update && sudo apt install rr</code></pre>
 </div>
 
 <button class="accordion">Fedora</button>
@@ -383,8 +382,7 @@ sudo apt install rr</code></pre>
 
 <button class="accordion">openSUSE (Leap / Tumbleweed)</button>
 <div class="panel">
-  <pre><code>sudo zypper refresh
-sudo zypper install rr</code></pre>
+  <pre><code>sudo zypper refresh && sudo zypper install rr</code></pre>
 </div>
 
 <button class="accordion">NixOS</button>
