@@ -294,7 +294,11 @@ The room has been reserved until 6 PM for those interested to stay back, ask que
 <h2 id="setup">Setup</h2>
 
 <h3 id="winsetup">Microsoft Windows</h3>
-Windows users should install [WSL2 and any Linux distro](https://learn.microsoft.com/en-us/windows/wsl/install) and follow the *nix instructions <a href="#nixdarwinsetup">below</a> after launching a bash shell session within WSL2.
+<p>
+  Windows users should install
+  <a href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL2 and any Linux distro</a>
+  and follow the <em>*nix instructions below</em> after launching a bash shell session within WSL2.
+</p>
 
 <h3 id="nixdarwinsetup">Linux and macOS Users</h3>
 <p>Follow these steps to install all required tools for the workshop using <strong>Pixi</strong> on Linux and macOS (Apple Silicon &amp; Intel):</p>
