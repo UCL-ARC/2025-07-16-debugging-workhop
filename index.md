@@ -23,26 +23,6 @@ email: ["krishna.kumar@ucl.ac.uk"]  # boxed, comma-separated list of contact ema
 # what3words:  "kick.sands.parent"         # optional: what3words (https://what3words.com) address of the workshop venue, without leading slashes e.g. "globe.lessening.computers"
 ---
 
-{% if site.carpentry == "dc" %}
-{% unless site.curriculum == "dc-astronomy" or site.curriculum == "dc-ecology" or site.curriculum == "dc-genomics" or site.curriculum == "dc-geospatial" or site.curriculum == "dc-image" or site.curriculum == "dc-socsci" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Data Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>dc-image</code>, <code>dc-astronomy</code>, <code>dc-ecology</code>, <code>dc-genomics</code>, <code>dc-socsci</code>, or <code>dc-geospatial</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
-{% comment %}
-Check SWC curriculum
-{% endcomment %}
-
-{% if site.carpentry == "swc" %}
-{% unless site.curriculum == "swc-inflammation" or site.curriculum == "swc-gapminder" %}
-<div class="alert alert-warning">
-It looks like you are setting up a website for a Software Carpentry curriculum but you haven't specified the curriculum type in the <code>_config.yml</code> file (current value in <code>_config.yml</code>: "<strong>{{ site.curriculum }}</strong>", possible values: <code>swc-inflammation</code>, or <code>swc-gapminder</code>). After editing this file, you need to run <code>make serve</code> again to see the changes reflected.
-</div>
-{% endunless %}
-{% endif %}
-
 {% comment %}
 Various booking systems are available. They are shown in the config above, if they are empty none will show below.
 {% endcomment %}
@@ -52,27 +32,6 @@ Various booking systems are available. They are shown in the config above, if th
 {% include booking/tickettailor.html %}
 {% elsif page.pretix %}
 {% include booking/pretix.html %}
-{% endif %}
-
-
-{% comment %}
-EVENTBRITE
-
-This block includes the Eventbrite registration widget if
-'eventbrite' has been set in the header.  You can delete it if you
-are not using Eventbrite, or leave it in, since it will not be
-displayed if the 'eventbrite' field in the header is not set.
-{% endcomment %}
-{% if page.eventbrite %}
-<strong>Some adblockers block the registration window. If you do not see the
-  registration box below, please check your adblocker settings.</strong>
-<iframe
-  src="https://www.eventbrite.com/tickets-external?eid={{page.eventbrite}}&ref=etckt"
-  frameborder="0"
-  width="100%"
-  height="280px"
-  scrolling="auto">
-</iframe>
 {% endif %}
 
 
@@ -86,55 +45,34 @@ the pitch.
 {% endcomment %}
 
 <p>
-<strong><a href="https://carpentries.org">The Carpentries</a></strong> project comprises the <a
-href="{{site.swc_site}}">Software Carpentry</a>, <a href="{{site.dc_site}}">Data Carpentry</a>, and
-<a href="{{site.lc_site}}">Library Carpentry</a> communities of Instructors, Trainers, Maintainers,
-helpers, and supporters who share a mission to teach foundational computational and data science
-skills to researchers.
-<p align="center">
-  <em>
-  <strong>Want to learn more and stay engaged with The Carpentries?</strong> Carpentries Clippings is The Carpentries' biweekly newsletter, where we share community news, community job postings, and more.
-Sign up to receive future editions and read our full archive: <a href="https://carpentries.org/newsletter/">https://carpentries.org/newsletter/</a>
-  </em>
-</p>
-{% if site.carpentry == "swc" %}
-{% include swc/intro.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/intro.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/intro.html %}
-{% elsif site.carpentry == "ucl-arc-debugging" %}
-{% include ucl-arc-debugging/intro.html %}
-{% endif %}
+  The <a href="{{site.arc_website}}">Centre for Advanced Research Computing (ARC)</a>
+  is UCL's research, innovation and service centre for the tools, practices and systems
+  that enable computational science and digital scholarship.
+  
+  We are an innovative centre with both professional services and academic missions:
+  <ul>
+    <li>We provide advanced, reliable and secure digital research infrastructure to
+      research groups in UCL and beyond.</li>
+    <li>We are a laboratory for research, teaching and innovation in compute, data
+      and software intensive research methods.</li>
+  </ul>
 
-{% if site.pilot %}
-This is a pilot workshop, testing out a lesson that is still under development. The lesson authors would appreciate any feedback you can give them about the lesson content and suggestions for how it could be further improved.
-{% endif %}
+  You can read more about <a href="{{site.arc_education_website}}" target="_blank"> what our
+    Education team offers</a>.
+</p>
 
 {% comment %}
 AUDIENCE
 
-Explain who your audience is.  (In particular, tell readers if the
-workshop is only open to people from a particular institution.
-{% endcomment %}
-{% if site.carpentry == "swc" %}
-{% include swc/who.html %}
-{% elsif site.carpentry == "dc" %}
-{% include dc/who.html %}
-{% elsif site.carpentry == "lc" %}
-{% include lc/who.html %}
-{% elsif site.carpentry == "ucl-arc-debugging" %}
-{% include ucl-arc-debugging/who.html %}
-{% endif %}
+<p id="who">
+  <strong>Who:</strong>
+  The course is aimed at anyone with an interest and experience in source-level debugging of compiled software code. It is particularly of interest to researchers and developers who are interested in High Performance Computing.
+  <strong>
+  You will need to be comfortable using the UNIX command line to interact with a machine, before you start this course. You will also need a good background in either C, C++ or Fortran programming languages.
+  </strong>
+  The <a href="https://swcarpentry.github.io/shell-novice/" target="_blank">Introduction to the UNIX shell</a> Carpentries lesson is a suitable pre-requisite, and ARC typically run an instance of this course every term.
+</p>
 
-{% comment %}
-LOCATION
-
-This block displays the address and links to maps showing directions
-if the latitude and longitude of the workshop have been set.  You
-can use https://www.latlong.net/ to find the lat/long of an
-address.
-{% endcomment %}
 {% assign begin_address = page.address | slice: 0, 4 | downcase  %}
 {% if page.address == "online" %}
 {% assign online = "true_private" %}
@@ -260,98 +198,11 @@ Display the contact email address set in the configuration file.
   for more information.
 </p>
 
-<p id="roles">
-  <strong>Roles:</strong>
-  To learn more about the roles at the workshop (who will be doing what),
-  refer to <a href="https://carpentries.org/workshop_faq/#what-are-the-roles-of-everyone-participating-in-a-workshop">our Workshop FAQ</a>.
-</p>
-
-{% comment %}
-WHO CAN ATTEND?
-
-If you would like to specify who can attend the workshop,
-you can use the section below.
-
-Move the 'endcomment' tag above the beginning of the following
-<p> tag to make this section visible.
-
-Edit the text to match who can attend the workshop. For instance:
-- This workshop is open to affiliates to ABC university.
-- This workshop is open to the public.
-- If you are interested in attending this workshop, contact me@example.com
-  for more information
 
 <p id="who-can-attend">
     <strong>Who can attend?:</strong>
-    This workshop is open to ....
+    This workshop is open to the public.
 </p>
-{% endcomment %}
-
-<hr/>
-
-{% comment%}
-CODE OF CONDUCT
-{% endcomment %}
-<h2 id="code-of-conduct">Code of Conduct</h2>
-
-<p>
-Everyone who participates in Carpentries activities is required to conform to the <a href="https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html">Code of Conduct</a>. This document also outlines how to report an incident if needed.
-</p>
-
-<p class="text-center">
-  <a href="https://goo.gl/forms/KoUfO53Za3apOuOK2">
-    <button type="button" class="btn btn-info">Report a Code of Conduct Incident</button>
-  </a>
-</p>
-<hr/>
-
-
-{% comment %}
-Collaborative Notes
-
-If you want to use an Etherpad, go to
-
-https://pad.carpentries.org/YYYY-MM-DD-site
-
-where 'YYYY-MM-DD-site' is the identifier for your workshop,
-e.g., '2015-06-10-esu'.
-
-Note we also have a CodiMD (the open-source version of HackMD)
-available at https://codimd.carpentries.org
-{% endcomment %}
-{% if page.collaborative_notes %}
-<h2 id="collaborative_notes">Collaborative Notes</h2>
-
-<p>
-We will use this <a href="{{ page.collaborative_notes }}">collaborative document</a> for chatting, taking notes, and sharing URLs and bits of code.
-</p>
-<hr/>
-{% endif %}
-
-
-{% comment %}
-SURVEYS - DO NOT EDIT SURVEY LINKS
-{% endcomment %}
-<h2 id="surveys">Surveys</h2>
-<p>Please be sure to complete these surveys before and after the workshop.</p>
-{% if site.carpentry == "incubator" %}
-<p><a href="{{ site.incubator_pre_survey }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.incubator_post_survey }}">Post-workshop Survey</a></p>
-{% elsif site.incubator_pre_survey or site.incubator_post_survey %}
-<div class="alert alert-danger">
-WARNING: you have defined custom pre- and/or post-survey links for
-a workshop not configured for The Carpentries Incubator
-(the value of `curriculum` is not set to `incubator` in `_config.yml`).
-Please comment out the `incubator_pre_survey` and `incubator_post_survey` fields
-in `_config.yml` or, if this workshop is teaching a lesson in the Incubator,
-change the value of `carpentry` to `incubator`.
-</div>
-{% elsif site.carpentry == "ucl-arc-debugging" %}
-{% include ucl-arc-debugging/surveys.html %}
-{% else %}
-<p><a href="{{ site.pre_survey }}{{ site.github.project_title }}">Pre-workshop Survey</a></p>
-<p><a href="{{ site.post_survey }}{{ site.github.project_title }}">Post-workshop Survey</a></p>
-{% endif %}
 
 <hr/>
 
@@ -421,9 +272,9 @@ please preview your site before committing, and make sure to run
 <h2 id="setup">Setup</h2>
 
 <p>
-  To participate in a
+  To participate in this
   {% if site.carpentry == "swc" %}
-  Software Carpentry
+  Debugging
   {% elsif site.carpentry == "dc" %}
   Data Carpentry
   {% elsif site.carpentry == "lc" %}
@@ -433,22 +284,7 @@ please preview your site before committing, and make sure to run
   you will need access to software as described below.
   In addition, you will need an up-to-date web browser.
 </p>
-<p>
-  We maintain a list of common issues that occur during installation as a reference for instructors
-  that may be useful on the
-  <a href = "{{site.swc_github}}/workshop-template/wiki/Configuration-Problems-and-Solutions">Configuration Problems and Solutions wiki page</a>.
-</p>
 
-{% comment %}
-For online workshops, the section below provides:
-- installation instructions for the Zoom client
-- recommendations for setting up Learners' workspace so they can follow along
-  the instructions and the videoconferencing
-
-If you do not use Zoom for your online workshop, edit the file
-`_includes/install_instructions/videoconferencing.html`
-to include the relevant installation instructions.
-{% endcomment %}
 {% if online != "false" %}
 {% include install_instructions/videoconferencing.html %}
 {% endif %}
