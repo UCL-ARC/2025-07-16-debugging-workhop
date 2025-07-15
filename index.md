@@ -316,6 +316,11 @@ The room has been reserved until 6 PM for those interested to stay back, ask que
 
 <h4>Mozilla rr</h4>
 
+<p>
+  <strong>rr</strong> is a lightweight tool for recording and deterministic debugging of Linux applications.<br>
+  See <a href="https://rr-project.org" target="_blank" rel="noopener noreferrer">rr-project.org</a>.
+</p>
+
 <style>
   button.accordion {
     background-color: #eee;
