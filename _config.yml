@@ -1,3 +1,4 @@
+---
 #------------------------------------------------------------
 # Values for this workshop.
 #------------------------------------------------------------
@@ -10,7 +11,7 @@
 #  dc: Data Carpentry
 #  lc: Library Carpentry
 #  cp: Carpentries (to use for instructor training for instance)
-#  ucl-hpcc: UCL-RC's Introduction to HPC Incubator lesson
+#  ucl-arc-debugging: UCL-ARC's debugging workshop lessons
 #  incubator: for workshops teaching a lesson in The Carpentries Incubator
 # Note that for regular workshops, you should use:
 #  https://github.com/carpentries/workshop-template
