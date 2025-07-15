@@ -218,95 +218,96 @@ of code below the Schedule `<h2>` header below with
 
 <h2 id="schedule">Schedule</h2>
 
-<div class="row">        <!-- first two days -->
-  <div class="col-md-6"> <!-- left column -->
-    <h3>schedule</h3>
-    <table class="table table-striped">
+<div class="row">       
+  <div class="col-12">
+  <div style="overflow-x: auto;">  <!-- added this wrapper for horizontal scrolling -->
+  <table class="table table-striped" style="min-width: 600px; width: 100%; table-layout: fixed;"> <!-- added inline style -->
   <thead>
-    <tr>
-      <th>Time</th>
-      <th>Duration</th>
-      <th>Lesson / Activity</th>
-    </tr>
+  <tr>
+  <th style="width: 15%;">Time</th>
+  <th style="width: 10%;">Duration</th>
+  <th style="width: 75%;">Lesson / Activity</th>
+  </tr>
   </thead>
   <tbody>
-    <tr>
-      <td>09:45 – 10:15</td>
-      <td>30 min</td>
-      <td>Welcome, coffee/tea/pastries, intro to the workshop, logistics, schedule, software and environment setup help on user laptops</td>
-    </tr>
-    <tr>
-      <td>10:15 – 11:20</td>
-      <td>1 hr 5 min</td>
-      <td>Exercises on command-line debugging of serial programs (Instructor: Krishna)</td>
-    </tr>
-    <tr>
-      <td>11:20 – 11:30</td>
-      <td>10 min</td>
-      <td>Break</td>
-    </tr>
-    <tr>
-      <td>11:30 – 12:00</td>
-      <td>30 min</td>
-      <td>Demonstration of reverse debugging capabilities of open source debuggers (Instructor: Krishna)</td>
-    </tr>
-    <tr>
-      <td>12:00 – 12:25</td>
-      <td>25 min</td>
-      <td>Introduction to parallel (multi-core, multi-node) debugging principles and introduction to the <code>mdb</code> debugger (Instructor: Tom Meltzer)</td>
-    </tr>
-    <tr>
-      <td>12:25 – 12:55</td>
-      <td>30 min</td>
-      <td>Exercise on multi-core debugging on laptops (Instructor: Tom Meltzer)</td>
-    </tr>
-    <tr>
-      <td>12:55 – 13:00</td>
-      <td>5 min</td>
-      <td>Fold away the tables and vacate the room (another event is scheduled in the room)</td>
-    </tr>
-    <tr>
-      <td>14:00 – 14:05</td>
-      <td>5 min</td>
-      <td>Return to room and setup the tables to continue the debugging workshop</td>
-    </tr>
-    <tr>
-      <td>14:05 – 14:15</td>
-      <td>10 min</td>
-      <td>Sort out HPC access and pair up participants without HPC access</td>
-    </tr>
-    <tr>
-      <td>14:15 – 15:15</td>
-      <td>1 hr</td>
-      <td>Intermediate <code>mdb</code> exercises: multi-node, GPU, BYOC (bring your own codes) debugging (Instructor: Tom Meltzer)</td>
-    </tr>
-    <tr>
-      <td>15:15 – 15:25</td>
-      <td>10 min</td>
-      <td>Coffee break</td>
-    </tr>
-    <tr>
-      <td>15:25 – 15:50</td>
-      <td>25 min</td>
-      <td>Principles of time-travel (reverse) debugging (Instructor: Greg Law, undo.io)</td>
-    </tr>
-    <tr>
-      <td>15:50 – 16:00</td>
-      <td>10 min</td>
-      <td>Setup Perforce TotalView demo license on users’ machines and help with installs</td>
-    </tr>
-    <tr>
-      <td>16:00 – 16:55</td>
-      <td>55 min</td>
-      <td>Reverse debugging exercises with the TotalView Debugger (Instructors: Dean Stewart and Will De Figueira, Perforce)</td>
-    </tr>
-    <tr>
-      <td>16:55 – 17:00</td>
-      <td>5 min</td>
-      <td>Concluding remarks, advanced exercises, further learning resources, next steps</td>
-    </tr>
+  <tr>
+  <td>09:45 – 10:15</td>
+  <td>30 min</td>
+  <td>Welcome, coffee/tea/pastries, intro to the workshop, logistics, schedule, software and environment setup help on user laptops</td>
+  </tr>
+  <tr>
+  <td>10:15 – 11:20</td>
+  <td>1 hr 5 min</td>
+  <td>Exercises on command-line debugging of serial programs (Instructor: Krishna)</td>
+  </tr>
+  <tr>
+  <td>11:20 – 11:30</td>
+  <td>10 min</td>
+  <td>Break</td>
+  </tr>
+  <tr>
+  <td>11:30 – 12:00</td>
+  <td>30 min</td>
+  <td>Demonstration of reverse debugging capabilities of open source debuggers (Instructor: Krishna)</td>
+  </tr>
+  <tr>
+  <td>12:00 – 12:25</td>
+  <td>25 min</td>
+  <td>Introduction to parallel (multi-core, multi-node) debugging principles and introduction to the <code>mdb</code> debugger (Instructor: Tom Meltzer)</td>
+  </tr>
+  <tr>
+  <td>12:25 – 12:55</td>
+  <td>30 min</td>
+  <td>Exercise on multi-core debugging on laptops (Instructor: Tom Meltzer)</td>
+  </tr>
+  <tr>
+  <td>12:55 – 13:00</td>
+  <td>5 min</td>
+  <td>Fold away the tables and vacate the room (another event is scheduled in the room)</td>
+  </tr>
+  <tr>
+  <td>14:00 – 14:05</td>
+  <td>5 min</td>
+  <td>Return to room and setup the tables to continue the debugging workshop</td>
+  </tr>
+  <tr>
+  <td>14:05 – 14:15</td>
+  <td>10 min</td>
+  <td>Sort out HPC access and pair up participants without HPC access</td>
+  </tr>
+  <tr>
+  <td>14:15 – 15:15</td>
+  <td>1 hr</td>
+  <td>Intermediate <code>mdb</code> exercises: multi-node, GPU, BYOC (bring your own codes) debugging (Instructor: Tom Meltzer)</td>
+  </tr>
+  <tr>
+  <td>15:15 – 15:25</td>
+  <td>10 min</td>
+  <td>Coffee break</td>
+  </tr>
+  <tr>
+  <td>15:25 – 15:50</td>
+  <td>25 min</td>
+  <td>Principles of time-travel (reverse) debugging (Instructor: Greg Law, undo.io)</td>
+  </tr>
+  <tr>
+  <td>15:50 – 16:00</td>
+  <td>10 min</td>
+  <td>Setup Perforce TotalView demo license on users’ machines and help with installs</td>
+  </tr>
+  <tr>
+  <td>16:00 – 16:55</td>
+  <td>55 min</td>
+  <td>Reverse debugging exercises with the TotalView Debugger (Instructors: Dean Stewart and Will De Figueira, Perforce)</td>
+  </tr>
+  <tr>
+  <td>16:55 – 17:00</td>
+  <td>5 min</td>
+  <td>Concluding remarks, advanced exercises, further learning resources, next steps</td>
+  </tr>
   </tbody>
-    </table>
+  </table>
+  </div>
   </div>
 </div>
 
