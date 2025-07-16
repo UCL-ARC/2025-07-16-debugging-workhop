@@ -423,6 +423,58 @@ The room has been reserved until 6 PM for those interested to stay back, ask que
   });
 </script>
 
+<h3 id="gdb-rr-comp">GDB vs RR comparison</h3>
+
+<div class="row">       
+  <div class="col-12">
+  <div style="overflow-x: auto;">  <!-- added this wrapper for horizontal scrolling -->
+<table>
+  <caption>Key Advantages of rr over gdb alone</caption>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>GDB</th>
+      <th>rr + GDB</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Deterministic replay</td>
+      <td class="cross">✘</td>
+      <td class="check">✔</td>
+    </tr>
+    <tr>
+      <td>Reverse execution</td>
+      <td class="limited">⚠️ (limited)</td>
+      <td class="check">✔</td>
+    </tr>
+    <tr>
+      <td>Reproducible concurrency</td>
+      <td class="cross">✘</td>
+      <td class="check">✔</td>
+    </tr>
+    <tr>
+      <td>One-time bug capture</td>
+      <td class="cross">✘</td>
+      <td class="check">✔</td>
+    </tr>
+    <tr>
+      <td>Time-travel snapshots</td>
+      <td class="cross">✘</td>
+      <td class="check">✔</td>
+    </tr>
+    <tr>
+      <td>Practical multi-threaded debugging</td>
+      <td class="cross">✘</td>
+      <td class="check">✔</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+</div>
+
+
 <h4>TotalView and training exercises</h4>
 
 <p>The installation guide for TotalView is available <a href="https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fhelp.totalview.io%2Fcurrent%2FHTML%2Finstallguide%2Finstall_totalview.htm&data=05%7C02%7Ckrishna.kumar%40ucl.ac.uk%7C14f0f55309484f32398908ddc2b52e4b%7C1faf88fea9984c5b93c9210a11d9a5c2%7C0%7C0%7C638880805616705153%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=bBJYNJKtDOlMRIs4KM%2BtJM3ghq5vT0EXTiNSgAoIaL0%3D&reserved=0" target="_blank">here</a>.</p>
@@ -438,3 +490,5 @@ The room has been reserved until 6 PM for those interested to stay back, ask que
     here
   </a>.
 </p>
+
+
