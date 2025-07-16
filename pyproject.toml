@@ -21,42 +21,70 @@ ruff = "*"
 termgraph = "==0.5.3"
 
 [tool.pixi.dependencies]
-bat = "*"               # Syntax highlighting file viewer
-bzip2 = "*"             # Compression tools (bzip2)
-ccache = "*"            # Compiler cache to speed rebuilds
-clang-tools = "*"       # Clang language server tools (incl. clangd)
-clang = "*"             # clang
-clangxx = "*"           # clang++
-cmake = "*"             # Cross-platform build system
-cmakelang = "*"         # CMake language server
-cpplint = "*"           # C++ style checker
-cppcheck = "*"          # Static analyzer for C/C++
-curl = "*"              # URL data transfer tool
-gawk = "*"              # GNU awk text processor
-gdb = "*"               # GNU Debugger
-gfortran = "*"          # GNU Fortran compiler
-git = "*"               # Git version control
-gnu-coreutils = "*"     # GNU core utilities (ls, cp, mv, etc.)
-grep = "*"              # GNU grep pattern search
-lldb = "*"              # LLVM debugger alternative to gdb
-make = "*"              # GNU make build automation
-mold = "*"              # High-performance linker replacement
-neocmakelsp = "*"       # CMake language server protocol support
-openmpi = "*"           # MPI implementation for parallel computing
-pandoc = "*"            # Universal document converter
-python = ">=3.10,<3.12" # Python interpreter version constraint
-sed = "*"               # GNU sed stream editor
-shellcheck = "*"        # Shell script static analysis
-tree-sitter-cli = "*"   # Source code parsing CLI with tree-sitter
+python = ">=3.10,<3.12" # Python interpreter (version constraint required for mdb-debugger)
+
+bash = "*"            # Bourne Again Shell
+bat = "*"             # Syntax highlighting file viewer
+bc = "*"              # bc is an arbitrary precision numeric processing language.
+bingrep = "*"         # Greps through binaries from various OSs and architectures
+binsider = "*"        # Analyze ELF binaries like a boss 😼🕵️‍♂️
+bzip2 = "*"           # Compression tools (bzip2)
+ccache = "*"          # Compiler cache to speed rebuilds
+clang = "*"           # clang
+clang-tools = "*"     # Clang language server tools (incl. clangd)
+clangxx = "*"         # clang++
+cmake = "*"           # Cross-platform build system
+cmakelang = "*"       # CMake language server
+cppcheck = "*"        # Static analyzer for C/C++
+cpplint = "*"         # C++ style checker
+curl = "*"            # URL data transfer tool
+doxygen = "*"         # Generate documentation from source code
+gawk = "*"            # GNU awk text processor
+gdb = "*"             # GNU Debugger
+gfortran = "*"        # GNU Fortran compiler
+ghostscript = "*"     # An interpreter for the PostScript language and for PDF
+git = "*"             # Git version control
+gnu-coreutils = "*"   # GNU core utilities (ls, cp, mv, etc.)
+graphviz = "*"        # Open Source graph visualization software.
+grep = "*"            # GNU grep pattern search
+imagemagick = "*"     # Software suite to create, edit, compose, or convert bitmap images.
+lldb = "*"            # LLVM debugger alternative to gdb
+make = "*"            # GNU make build automation
+micro = "*"           # A modern and intuitive terminal-based text editor
+mold = "*"            # High-performance linker replacement
+nano = "*"            # Simple terminal text editor
+nasm = "*"            # Netwide Assembler: an assembler targetting the Intel x86 series of processors.
+neocmakelsp = "*"     # CMake language server protocol support
+nvim = "*"            #Ambitious Vim-fork focused on extensibility and agility
+openmpi = "*"         # MPI implementation for parallel computing
+pandoc = "*"          # Universal document converter
+procs = "*"           # Modern replacement for ps written by Rust
+rsync = "*"           # Tool for fast incremental file transfer
+sed = "*"             # GNU sed stream editor
+shellcheck = "*"      # Shell script static analysis
+tar = "*"             # GNU tape archive program
+tree-sitter-cli = "*" # Source code parsing CLI with tree-sitter
+universal-ctags = "*" # A maintained ctags implementation
+uv = "*"              # An extremely fast Python package installer and resolver, written in Rust.
+vim = "*"             # Vim is a greatly improved version of the good old UNIX editor Vi
+wget = "*"            # utility for non-interactive download of files from the Web
+yasm = "*"            # Yasm is a complete rewrite of the NASM assembler under the "new" BSD License.
 
 # Linux-only packages (Linux x86_64 and aarch64)
 [tool.pixi.target.linux-64.dependencies]
 valgrind = "*" # Memory debugging/profiling tool for Linux
 elfutils = "*" # ELF utilities for Linux binaries
+emacs = "*"    # GNU Emacs is an extensible, customizable text editor.
 
 [tool.pixi.target.linux-aarch64.dependencies]
 valgrind = "*" # Memory debugging/profiling tool for Linux
 elfutils = "*" # ELF utilities for Linux binaries
+
+[tool.pixi.target.osx-64.dependencies]
+emacs = "*" # GNU Emacs is an extensible, customizable text editor.
+
+[tool.pixi.target.osx-arm64.dependencies]
+emacs = "*" # GNU Emacs is an extensible, customizable text editor.
 
 [tool.pixi.tasks]
 debug = { cmd = "gdb", cwd = "." } # Helper task to start gdb in current dir
