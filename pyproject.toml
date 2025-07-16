@@ -23,6 +23,7 @@ termgraph = "==0.5.3"
 [tool.pixi.dependencies]
 python = ">=3.10,<3.12" # Python interpreter (version constraint required for mdb-debugger)
 
+automake = "*"        # Tool for automatically generating Makefile.in files compliant with the GNU Coding Standards.
 bash = "*"            # Bourne Again Shell
 bat = "*"             # Syntax highlighting file viewer
 bc = "*"              # bc is an arbitrary precision numeric processing language.
@@ -45,6 +46,7 @@ gfortran = "*"        # GNU Fortran compiler
 ghostscript = "*"     # An interpreter for the PostScript language and for PDF
 git = "*"             # Git version control
 gnu-coreutils = "*"   # GNU core utilities (ls, cp, mv, etc.)
+gnuplot = "*"         # Gnuplot, plotting from command line
 graphviz = "*"        # Open Source graph visualization software.
 grep = "*"            # GNU grep pattern search
 imagemagick = "*"     # Software suite to create, edit, compose, or convert bitmap images.
@@ -58,6 +60,7 @@ neocmakelsp = "*"     # CMake language server protocol support
 nvim = "*"            #Ambitious Vim-fork focused on extensibility and agility
 openmpi = "*"         # MPI implementation for parallel computing
 pandoc = "*"          # Universal document converter
+pkg-config = "*"      # Interface for querying installed libraries for use during compilation.
 procs = "*"           # Modern replacement for ps written by Rust
 rsync = "*"           # Tool for fast incremental file transfer
 sed = "*"             # GNU sed stream editor
