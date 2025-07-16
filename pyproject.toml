@@ -63,6 +63,7 @@ rsync = "*"           # Tool for fast incremental file transfer
 sed = "*"             # GNU sed stream editor
 shellcheck = "*"      # Shell script static analysis
 tar = "*"             # GNU tape archive program
+tealdeer = "*"        # Very fast implementation of tldr in Rust
 tree-sitter-cli = "*" # Source code parsing CLI with tree-sitter
 universal-ctags = "*" # A maintained ctags implementation
 uv = "*"              # An extremely fast Python package installer and resolver, written in Rust.
