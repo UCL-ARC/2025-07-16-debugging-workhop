@@ -76,19 +76,21 @@ yasm = "*"            # Yasm is a complete rewrite of the NASM assembler under t
 
 # Linux-only packages (Linux x86_64 and aarch64)
 [tool.pixi.target.linux-64.dependencies]
-valgrind = "*" # Memory debugging/profiling tool for Linux
-elfutils = "*" # ELF utilities for Linux binaries
-emacs = "*"    # GNU Emacs is an extensible, customizable text editor.
+elfutils = "*"     # ELF utilities for Linux binaries
+emacs = "*"        # GNU Emacs is an extensible, customizable text editor.
+gxx_linux-64 = "*" # GNU C++ Compiler
+valgrind = "*"     # Memory debugging/profiling tool for Linux
 
 [tool.pixi.target.linux-aarch64.dependencies]
-valgrind = "*" # Memory debugging/profiling tool for Linux
-elfutils = "*" # ELF utilities for Linux binaries
+gxx_linux-aarch64 = "*" # GNU C++ Compiler
+valgrind = "*"          # Memory debugging/profiling tool for Linux
+elfutils = "*"          # ELF utilities for Linux binaries
 
 [tool.pixi.target.osx-64.dependencies]
-emacs = "*" # GNU Emacs is an extensible, customizable text editor.
+clangxx_osx-64 = "*" # clang compilers for conda-build 3
 
 [tool.pixi.target.osx-arm64.dependencies]
-emacs = "*" # GNU Emacs is an extensible, customizable text editor.
+clangxx_osx-arm64 = "*" # clang compilers for conda-build 3
 
 [tool.pixi.tasks]
 debug = { cmd = "gdb", cwd = "." } # Helper task to start gdb in current dir
