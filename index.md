@@ -315,7 +315,7 @@ The room has been reserved until 6 PM for those interested to stay back, ask que
 </ol>
 
 <h4>For the CUDA/MPI example</h4>
-  <li>Clone or download the exercise files from this <a href="https://github.com/TomMelt/nvidia-mpi-cuda-example">GitHub repository</a>. We will provide instructions on how to run this example on a HPC system</li>
+  <li>Clone or download the exercise files from this <a href="https://github.com/TomMelt/nvidia-mpi-cuda-example">GitHub repository</a>. We will provide instructions on how to run this example on a HPC system.</li>
 
 
 
