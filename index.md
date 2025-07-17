@@ -300,7 +300,7 @@ The room has been reserved until 6 PM for those interested to stay back, ask que
   and follow the <em>*nix instructions below</em> after launching a bash shell session within WSL2.
 </p>
 
-<h3 id="nixdarwinsetup">Linux and macOS Users</h3>
+<h3 id="nixdarwinsetup">Linux and macOS users</h3>
 <p>Follow these steps to install all required tools for the workshop using <strong>Pixi</strong> on Linux and macOS (Apple Silicon &amp; Intel):</p>
 <ol>
   <li>Install <code>pixi</code>:
